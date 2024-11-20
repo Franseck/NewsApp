@@ -14,8 +14,9 @@ state.email = action.payload.email
 state.password = action.payload.password
 },
 
-deleteUser:()=>{
-
+deleteUser:(state)=>{
+state.email=""
+state.password=""
 }
   }
 })

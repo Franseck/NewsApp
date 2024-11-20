@@ -2,12 +2,23 @@ import React from 'react'
 import "../scss/navbar.scss"
 import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { deleteUser } from '../redux/AuthSlice';
 
 
 
 const Navbar = () => {
 
+const {email}=useSelector((state)=>state.AuthSlice)
+
   const navigate = useNavigate()
+
+const dispatch = useDispatch();
+
+  const signOut=()=>{
+  dispatch(deleteUser())
+   
+    }
 
   return (
 
@@ -22,8 +33,15 @@ const Navbar = () => {
              News
           </Typography>
 
+          {email ? (
+            <Button color="inherit" onClick={signOut} class='but' >
+              LogOut
+            </Button>
+          ) : (
+            <Button color="inherit" class='but'  >LogIn</Button>
+          )}
    
-            <Button onClick={()=>navigate("/Login") } class="but" >LogIn</Button>
+           
           
         </Toolbar>
       </AppBar>

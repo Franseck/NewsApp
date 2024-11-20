@@ -6,8 +6,7 @@ const PrivateRouter = () => {
 
   const {email,password} = useSelector((state)=>state.AuthSlice);
 
-  return 
-  email==="a@a.com" . password==="1234" ? (<Outlet/>) : (<Navigate to="/Login"/>)
+  return email==="a@a.com" . password==="1234" ? (<Outlet/>) : (<Navigate to="/Login"/>)
 
 
 }
