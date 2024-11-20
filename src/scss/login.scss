@@ -7,11 +7,20 @@
     background-position: center;
     height: 100vh;
     display: flex;
+    flex-direction: column;
 align-items: center;
     justify-items: center;
+    gap: 2rem;
 }
-
-
+h1{
+    font-family: "Special Elite";
+    margin-top: 1rem;
+}
+img{
+    width: 6rem;
+    border-radius: 1rem;
+    border: 2px double $October-4-hex;
+}
 
 .login{
    

@@ -4,7 +4,7 @@ import NewsSlice from "../redux/NewsSlice";
 
 export const store = configureStore({
   reducer: {
-    authReducer: AuthSlice,
-    newsReducer: NewsSlice
+    AuthSlice: AuthSlice,
+    NewsSlice: NewsSlice
   },
 })

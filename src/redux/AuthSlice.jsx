@@ -1,27 +1,26 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-const initialState = {
-  email:"",
-  password:"",
-}
 
 export const AuthSlice = createSlice({
-  name: 'authReducer',
-  initialState,
+  name: "AuthSlice",
+  initialState: {
+    email: "",
+    password: "",
+  },
 
   reducers: {
-createUser:()=>{
-
+createUser:(state, action)=>{
+state.email = action.payload.email
+state.password = action.payload.password
 },
 
 deleteUser:()=>{
 
 }
-
-  },
+  }
 })
 
 // Action creators are generated for each case reducer function
-export const { createUser, deleteUser} = AuthSlice.actions
 
+export const { createUser, deleteUser} = AuthSlice.actions
 export default AuthSlice.reducer

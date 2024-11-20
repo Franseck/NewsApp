@@ -1,11 +1,13 @@
 import React from 'react'
 import "../scss/navbar.scss"
 import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
+import { useNavigate } from 'react-router-dom';
 
 
 
 const Navbar = () => {
 
+  const navigate = useNavigate()
 
   return (
 
@@ -21,7 +23,7 @@ const Navbar = () => {
           </Typography>
 
    
-            <Button class="but" >LogIn</Button>
+            <Button onClick={()=>navigate("/Login") } class="but" >LogIn</Button>
           
         </Toolbar>
       </AppBar>
