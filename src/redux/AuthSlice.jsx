@@ -1,27 +1,27 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  value: 0,
+  email:"",
+  password:"",
 }
 
-export const counterSlice = createSlice({
-  name: 'counter',
+export const AuthSlice = createSlice({
+  name: 'authReducer',
   initialState,
-  reducers: {
-    increment: (state) => {
 
-      state.value += 1
-    },
-    decrement: (state) => {
-      state.value -= 1
-    },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload
-    },
+  reducers: {
+createUser:()=>{
+
+},
+
+deleteUser:()=>{
+
+}
+
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount } = counterSlice.actions
+export const { createUser, deleteUser} = AuthSlice.actions
 
-export default counterSlice.reducer
+export default AuthSlice.reducer

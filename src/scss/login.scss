@@ -1,0 +1,26 @@
+@import "variables";
+
+
+.back{
+    background-image: url(../assets/paper.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+align-items: center;
+    justify-items: center;
+}
+
+
+
+.login{
+   
+    border-top: 2px solid #FFFFFF75;
+    border-left: 2px solid #FFFFFF75;
+    box-shadow : 5px 5px 12px#5d310db6 ;
+    background: #FFFFFF25;
+    border-radius: 1rem;
+    backdrop-filter: blur(3px);
+
+    
+}
