@@ -1,2 +1,18 @@
-@use "variables";
+@import "variables";
 
+.nav{
+  background-color: $October-2-hex;
+  font-family: "Special Elite", serif;
+  color: $October-4-hex;
+
+}
+
+.but{
+  padding: 6px;
+  font-family: "Special Elite", serif;
+  text-align: center;
+  align-items: center;
+  background-color: $October-4-hex;
+  border-radius: 5px;
+  cursor: pointer;
+}

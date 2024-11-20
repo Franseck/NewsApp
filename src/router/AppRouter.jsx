@@ -1,8 +1,15 @@
 import React from 'react'
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+
 
 const AppRouter = () => {
   return (
-    <div>AppRouter</div>
+    <div>
+         <Navbar />
+         <Footer/>
+
+    </div>
   )
 }
 
