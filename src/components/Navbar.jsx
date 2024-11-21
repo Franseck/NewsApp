@@ -1,9 +1,10 @@
 import React from 'react'
 import "../scss/navbar.scss"
-import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
+import { AppBar, Box, Button, colors, Toolbar, Typography } from "@mui/material";
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteUser } from '../redux/AuthSlice';
+import { red } from '@mui/material/colors';
 
 
 
@@ -30,7 +31,7 @@ const dispatch = useDispatch();
             component="div"
             sx={{ flexGrow: 1, cursor: "pointer", fontFamily:"Special Elite" }}
           >
-             News
+             <span>Breaking </span>  News
           </Typography>
 
           {email ? (
