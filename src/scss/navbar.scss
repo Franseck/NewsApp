@@ -1,7 +1,7 @@
 @import "variables";
 
 .nav{
-  background-color: $October-2-hex;
+  background: linear-gradient(90deg, rgba(103,86,52,1) 24%, rgba(77,59,37,0.9612219887955182) 50%, rgba(91,82,69,1) 72%);
   font-family: "Special Elite", serif;
   color: $October-4-hex;
 
@@ -14,4 +14,5 @@
   background-color: $October-4-hex;
   border-radius: 5px;
   cursor: pointer;
+  font-family: "Special Elite";
 }
