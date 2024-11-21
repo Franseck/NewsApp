@@ -11,7 +11,7 @@ return response.data.articles;
 
 const initialState = {
 news:[],
-loading:false
+loading:""
 }
 
 export const NewsSlice = createSlice({
