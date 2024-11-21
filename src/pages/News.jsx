@@ -7,6 +7,7 @@ import loadingGif from "../assets/loading.gif"
 
 
 
+
 const News = () => {
 
  const dispatch= useDispatch();
@@ -27,14 +28,15 @@ dispatch(getData());
         </Box>
       ) : (
         <Box
-          xs={{ d: "flex" }}
+          xs={{ d: "flex"  }}
           display="flex"
           alignItems="center"
           justifyContent="space-evenly"
           flexWrap="wrap"
+          sx={{backgroundColor:"bisque"}}
         >
           {news.map((a, index) => (
-            <Card key={index} sx={{ maxWidth: 345, maxHeight: 600, m: 5 }}>
+            <Card key={index} sx={{ maxWidth: 345, maxHeight: 600, m: 5, backgroundColor:"burlywood"  }}>
               <CardMedia component="img" image={a.urlToImage} height="250" />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
@@ -45,9 +47,9 @@ dispatch(getData());
                 </Typography>
               </CardContent>
               <CardActions>
-                <Button size="small">CLEAR</Button>
+                <Button class="but" size="small">CLEAR</Button>
 
-                <Button size="small" href={a.url} target="_blank">
+                <Button class="but"  size="small" href={a.url} target="_blank">
                   DETAIL
                 </Button>
               </CardActions>
