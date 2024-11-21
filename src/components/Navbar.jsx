@@ -10,7 +10,7 @@ import { deleteUser } from '../redux/AuthSlice';
 const Navbar = () => {
 
 const {email}=useSelector((state)=>state.AuthSlice)
-const { loading } = useSelector((state) => state.NewsSlice);
+
 
 
 
@@ -18,7 +18,7 @@ const dispatch = useDispatch();
 
   const signOut=()=>{
   dispatch(deleteUser())
-  loading=false
+
     }
 
   return (
