@@ -7,14 +7,21 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import PrivateRouter from "./PrivateRouter"
 
 
+
+
 const AppRouter = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter 
+    future={{
+      v7_relativeSplatPath: true,
+      v7_startTransition: true,
+    }}
+    >
      <Navbar/>
      
       <Routes>
-       <Route path="/" element={<PrivateRouter/>}>
-          <Route path="" element={<News />} />
+       <Route path="" element={<PrivateRouter/>}>
+          <Route path="/" element={<News />} />
         </Route>
 
 

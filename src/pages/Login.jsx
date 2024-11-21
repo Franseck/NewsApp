@@ -11,17 +11,18 @@ import { useNavigate } from 'react-router-dom';
 const Login = () => {
 
 let {email, password} = useSelector((state)=>state.AuthSlice);
-const navigate = useNavigate()
+const navigate = useNavigate();
 
 
 const dispatch = useDispatch();
-dispatch(createUser({email,password}) )
 
 const handleSubmit = (e)=> {
-  e.prevent.default()
+  e.preventDefault()
+dispatch(createUser({email,password}) )
+navigate("/")
 }
 
-navigate ("/")
+
 
   return (
 <div className='back'>
@@ -31,7 +32,7 @@ navigate ("/")
             <div className="login">
       
       <Box 
-      onSubmit={handleSubmit}
+     
         sx={{
           marginTop: 5,
           marginBottom:3,
@@ -49,13 +50,14 @@ navigate ("/")
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>
-              <Box component="form" noValidate sx={{ mt: 1 }}>
+              <Box       onSubmit={handleSubmit} 
+              component="form" noValidate sx={{ mt: 1 }}>
           <TextField  
             margin="normal"
             required
             fullWidth
             id="email"
-            label="Email Address (a@a.com)"
+            label="Email Address (seckin)"
             name="email"
             autoComplete="email"
             autoFocus
@@ -69,11 +71,12 @@ navigate ("/")
             label="Password (1234)" 
             type="password"
             id="password"
-            onChange={(e)=> (password= e.target.value)}
+            autoComplete= "password"
+             onChange={(e)=> (password= e.target.value)}
           />
 
           <Button
-            type="submit"
+                 type="submit"
             fullWidth
             variant="contained"
              sx={{ mt: 3, mb: 2, backgroundColor:"bisque", color:"black" }}

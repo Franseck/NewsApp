@@ -4,7 +4,7 @@ import "../scss/footer.scss";
 
 function Footer() {
   return (
-    <div class="last">
+    <div className="last">
     <h3>Made by Seckin</h3>
   </div>
   )

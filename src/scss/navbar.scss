@@ -17,4 +17,9 @@ span{
   border-radius: 5px;
   cursor: pointer;
   font-family: "Special Elite";
+  
+}
+.but:hover{
+  background-color: bisque;
+  color: $October-5-hex;
 }

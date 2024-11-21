@@ -1,10 +1,9 @@
 import React from 'react'
 import "../scss/navbar.scss"
-import { AppBar, Box, Button, colors, Toolbar, Typography } from "@mui/material";
-import { useNavigate } from 'react-router-dom';
+import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteUser } from '../redux/AuthSlice';
-import { red } from '@mui/material/colors';
+
 
 
 
@@ -12,7 +11,7 @@ const Navbar = () => {
 
 const {email}=useSelector((state)=>state.AuthSlice)
 
-  const navigate = useNavigate()
+
 
 const dispatch = useDispatch();
 
@@ -35,11 +34,11 @@ const dispatch = useDispatch();
           </Typography>
 
           {email ? (
-            <Button color="inherit" onClick={signOut} class='but' >
+            <Button  onClick={signOut} class='but'>
               LogOut
             </Button>
           ) : (
-            <Button color="inherit" class='but'  >LogIn</Button>
+            <Button class="but"  >LogIn</Button>
           )}
    
            
