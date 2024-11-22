@@ -20,13 +20,14 @@ const AppRouter = () => {
      <Navbar/>
      
       <Routes>
+         <Route path="/login" element={<Login />} />
        <Route path="/" element={<PrivateRouter/>}>
           <Route path="" element={<News />} />
         </Route>
 
 
 
-        <Route path="/login" element={<Login />} />
+       
       </Routes>
       <Footer/>
     </BrowserRouter>
