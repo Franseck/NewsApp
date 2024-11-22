@@ -9,7 +9,11 @@ import PrivateRouter from "./PrivateRouter"
 
 
 
+
 const AppRouter = () => {
+
+
+
   return (
     <BrowserRouter 
     future={{
@@ -17,10 +21,12 @@ const AppRouter = () => {
       v7_startTransition: true,
     }}
     >
+     
      <Navbar/>
      
       <Routes>
          <Route path="/login" element={<Login />} />
+
        <Route path="/" element={<PrivateRouter/>}>
           <Route path="" element={<News />} />
         </Route>
