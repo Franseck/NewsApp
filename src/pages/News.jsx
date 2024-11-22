@@ -17,14 +17,14 @@ const { news,loading } = useSelector((state) => state.NewsSlice);
 
 dispatch(getData());
 
- },[dispatch])
+ },[])
 
 
   return (
     <>
       {loading ? (
         <Box display="flex" alignItems="center" justifyContent="center">
-          <img src={loadingGif} alt="" height="800px"/>
+          <img src={loadingGif} alt="" height="300px" width="300px"/>
         </Box>
       ) : (
         <Box
