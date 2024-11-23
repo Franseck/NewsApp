@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const getData=createAsyncThunk("NewsSlice/getData", async ()=>{
   const response = await axios(
- "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=3da128da75bb4e819bb876090635ca8f"
+ "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=56593e3a139c4e5f8b5c1a1e474239e6"
   );
   //console.log(response);
 return response.data.articles;
